@@ -21,10 +21,13 @@ man_3_shell ------- Custom man page.
 
 **Environment**
 
-Language: C
-OS: Ubuntu 14.04 LTS
-Compiler: gcc 4.8.4
-Style guidelines: Betty style
+	Language: C
+
+	OS: Ubuntu 14.04 LTS
+
+	Compiler: gcc 4.8.4
+
+	Style guidelines: Betty style
 
 **How to Install, compile and Use**
 
