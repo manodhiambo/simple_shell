@@ -1,4 +1,7 @@
 #include "shell.h"
+#include<stdio.h>
+#include<stdlib.h>
+
 /**
  * _getenv - function that gets all PATH line
  * @name: environment variable to find
