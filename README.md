@@ -50,17 +50,28 @@ cisfun>>
                 ********** Made for ALX Kenya **********
 
 cisfun>> ls -l
+
 total 36
+
 -rw-r--r-- 1 qimae qimae  1825 Nov  5 12:01 builtin.c
+
 -rw-r--r-- 1 qimae qimae  1807 Nov  5 11:48 handler.c
+
 -rwxr-xr-x 1 qimae qimae 17920 Nov  5 12:01 shell
+
 -rw-r--r-- 1 qimae qimae   401 Nov  2 12:59 shell.c
+
 -rw-r--r-- 1 qimae qimae   471 Nov  2 17:25 shell.h
+
 cisfun>> echo c programming is cool
+
 c programming is cool
+
 cisfun>> 
 
 
 **Authors**
+
 Kimae Ngowa.
+
 Kevin Odhiambo.
