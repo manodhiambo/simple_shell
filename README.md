@@ -32,7 +32,7 @@ Install and compile
 
 	(your_terminal)$ git clone git@github.com:Qimae/simple_shell.git
 	(your_terminal)$ cd simple_shell
-	(your_terminal)$ gcc -Wall -Werror -Wextra -pedantic -Wno-format *.c -o shell
+	(your_terminal)$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o shell
 
 Non_interactive mode
 
