@@ -20,6 +20,8 @@ char *read_line(void);
 int execute(char **args);
 void shell_loop(void);
 char **split_line(char *line);
-
+char *_getenv(char *name);
+char *_which(char *str1, char *str2);
+int _path(char **argv);
 #endif
 
