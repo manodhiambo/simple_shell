@@ -14,7 +14,7 @@
 int main(int ac, char **av);
 int shell_cd(char **args);
 int shell_exit(char **args);
-int num_builtins();
+int num_builtins(void);
 int launch(char **args);
 char *read_line(void);
 int execute(char **args);
