@@ -1,0 +1,121 @@
+.\" Manpage for simple shell.
+.\" Contact @Manodhiambo or @Qimae to correct errors or typos.
+.TH HSH 1 "6th Novermber 2021" "1.0" "simple shell man page"
+.SH NAME
+hsh \- The Holberton command interpreter (shell)
+.SH SYNOPSIS
+.B hsh
+[file or arguements]
+.SH DESCRIPTION
+.B  hsh
+is a command language interpreter that executes commands read
+from standard input or from a file. A full manual on documentation can
+be found in the readme file.
+.I hsh
+does not handle any option processing like bash or zsh.
+.SS Overview
+The shell is a command that reads lines from either a file or a terminal,
+interprets them, and generally executes other commands. It is the program
+that is running when a user logs into the system.
+.SH ARGUEMENTS
+The first argument read from standard inputis assumed to be the command
+and following arguments are its parameters. To invoke a script or file,
+the first arguement is assumed to be the filename, no other options are
+necessary.
+.PP
+.B hsh
+reads and executes commands from standard input or the file, then exits.
+.PP
+.B hsh
+exit status is the exit status of the last command executed in the input.
+If no commands are executed, the exit status is 0. An attempt is first
+made to open the file in the current directory, and, if no file is found
+, then the shell searches the directories in PATH for the script.
+.SH SHELL GRAMMAR
+.B Simple Command
+is a sequence of optional variable assignments followed by a blank separated
+words or redirectors, and terminated by a control operator. Blanks include
+new lines, tabs. The first word specifies the command to be executed, and is
+passed as arguement zero, the remaining words are passed as arguements to the
+command.
+.PP
+Comments can be added to standard input using the
+.B#
+before any arguements or words to comment out.
+.PP
+.I Example:
+echo qwerty
+.PP
+This will only write qwerty to standard output.
+.SH PARAMETERS
+A parameter is an entity that stores values. It can be a name, a number, or one
+of the special characters listed below under Special Parameters. A variable is a
+parameter denoted by a name.
+.PP
+.B Special Parameters
+.PP
+$Parameter
+.PP
+To view a list of all parameters and environemental variables, the builtin
+.B env
+is used. Or to view the value of a specific parameters simply
+.PP
+echo $parameter
+.PP
+in the standard input.
+.PP
+.SH ENVIRONMENT
+When a program is invoked it is given an array of strings called the
+environment. This is a list of name-value pairs, of the form name=value.
+.PP
+The shell provides several ways to manipulate the environment. On invocation,
+the shell scans its own environment and creates a parameter for each name found
+, automatically marking it for export to child processes. Executed commands
+inherit the environment.
+.PP
+.SH EXIT STATUS
+The exit status of an executed command is the value returned by the wait system
+call or equivalent function. If commands succeed, they return 1, else they
+return 134. Builtin commands return 0 on success and 2 on failure.
+.PP
+If a command is not found, the child process created to execute it returns
+a status of 134.
+.PP
+.SH SHELL BUILTIN COMMANDS
+.B hsh
+contains some builtin functions. These are listed below and do not support any
+flags.
+.PP
+.B env
+.PP
+Prints out a list of all shell variables. Each variable is separated by a new
+line. Each variable is outputed as followed
+.I key=value
+.PP
+.I Example:
+env
+.PP
+This prints out all the environemental variables and its values.
+.PP
+.B exit
+.PP
+The exit command terminates the current shell (or script).
+If
+the returned status the the status of the most recently
+executed command (i.e. $?).
+.PP
+.SH AUTHORS
+KEVIN OWINO ODHIAMBO, ALX-Student Full Stack Software Enginner
+.PP
+KIMAE NGOWA, ALX-Student Full Stack Software Egineer
+.PP
+.SH "SEE ALSO"
+man pages in bash(1), zsh(1), sh(1)
+.SH "BUGS"
+.PP
+Alias, cd, exit with argumment did not finish, special parameters and
+history of commands did not finish yet
+.PP
+If you find any bugs in
+.B hsh
+you should report it.
